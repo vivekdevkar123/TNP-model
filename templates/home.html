@@ -1,0 +1,140 @@
+<html>
+    <title>T&P Portal YCCE, Nagpur</title>
+<head>
+
+    <style>
+        .text-heading {
+            margin-top: 0;
+            text-align: center;
+            color: #6466eb;
+            font-size: 48px;
+            font-weight: bolder;
+            padding-top: 25px;
+            padding-bottom: 5px;
+            border-radius: 55px;
+        }
+
+        .card-title {
+            margin-top: 0;
+            text-align: center;
+            color: #4a4d4c;
+            font-size: 28px;
+            font-weight: bold;
+            padding-top: 5px;
+            padding-bottom: 25px;
+            border-radius: 55px;
+        }
+
+        .card {
+            width: 80%;
+            margin: auto;
+            background-color: #fff;
+            height: max-content;
+            padding: 20px;
+            text-align: center;
+            border: 2px solid black;
+            border-radius: 10px;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+        }
+
+        .form-group label {
+            flex: 1;
+            font-size: 1.7rem;
+            /* Labels take up all available space in the form group */
+        }
+
+        .form-group input {
+            flex: 1;
+            height: 25px;
+            border: 2px solid black;
+            border-radius: 16px;
+            margin: 10px;
+            /* Input fields take up all available space in the form group */
+        }
+
+        .submit-button {
+            background-color: #36bea6;
+            color: #fff;
+            padding: 10px;
+            margin-top: 50px;
+            text-align: center;
+            border: 2px solid black;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: bold;
+            border-radius: 24px;
+            height: 50px;
+            width: 25vw;
+        }
+
+        .submit-button:hover {
+            background-color: #3e9e8d;
+        }
+    </style>
+
+</head>
+
+<body bgcolor="#edf1f5">
+
+
+    <div class="row page-titles">
+        <div class="col-md-5 align-self-center">
+            <h4 class="text-heading">T&P Portal YCCE, Nagpur</h4>
+        </div>
+    </div>
+
+    <h4 class="card-title">Placement Prediction</h4>
+
+
+    <div class="card">
+        <div class="card-body">
+
+            <form class="form-material m-t-40" action="{% url 'result' %}" >
+
+                {% csrf_token %}
+                <div class="form-group">
+                    <label>CGPA : </label>
+                    <input type="text" name="a" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Score in Quants : </label>
+                    <input type="text" name="b" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Score in Verbal : </label>
+                    <input type="text" name="c" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Score in Logical Reasoning : </label>
+                    <input type="text" name="d" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Score in Technical : </label>
+                    <input type="text" name="e" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Score in Coding : </label>
+                    <input type="text" name="f" required>
+                </div>
+
+                <div style="margin-top: 35px;">
+                    <input type="submit" , value='predict!' class="submit-button" style="margin: auto;">
+                </div>
+            </form>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
