@@ -1,1 +1,1 @@
-web:gunicorn TnpMl.wsgi
+web:  gunicorn TnpMl.wsgi
