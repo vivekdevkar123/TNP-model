@@ -1,1 +1,1 @@
-web:gunicorn TnpMl.wsgi --log-file -
+web:gunicorn TnpMl.wsgi
